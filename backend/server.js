@@ -120,7 +120,7 @@ async function startServer() {
     console.error("The API will start in diagnostic mode.");
   }
 
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     console.log(`DealFlow360 API running on port ${PORT}`);
   });
 }
