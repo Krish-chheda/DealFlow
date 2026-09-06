@@ -43,7 +43,8 @@ import {
   YAxis,
 } from "recharts";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 const DEFAULT_CENTER = [20.5937, 78.9629];
 const EMPTY_FORM = {
   name: "",

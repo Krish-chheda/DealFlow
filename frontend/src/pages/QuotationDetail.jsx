@@ -6,7 +6,8 @@ import {
 import { useAuth } from "../context/AuthContext";
 import { printOrExportPDF } from "../utils/exportUtils";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 const currency = (value) =>
   `₹${Number(value || 0).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 

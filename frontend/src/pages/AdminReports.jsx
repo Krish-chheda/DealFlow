@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { BarChart2, TrendingUp, Users, Package, ShieldCheck, Sparkles, Lightbulb } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 export default function AdminReports() {
   const { token } = useAuth();

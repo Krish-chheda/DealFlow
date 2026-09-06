@@ -2,7 +2,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Edit3, Percent, Plus, X } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 const TIERS = ["BRONZE", "SILVER", "GOLD"];
 const CATEGORIES = ["HARDWARE", "SERVICE", "SUBSCRIPTION", "ELECTRONICS", "FURNITURE", "SOFTWARE", "SERVICES", "OTHER"];
 const EMPTY_FORM = { customerTier: "BRONZE", productCategory: "HARDWARE", maxDiscount: "", status: "ACTIVE" };

@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Edit3, Filter, Plus, RotateCcw, Save, Search, X } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 const currencyOptions = ["INR", "USD", "EUR", "GBP"];
 const frequencies = ["MONTHLY", "QUARTERLY", "YEARLY"];
 const EMPTY_PLAN = { name: "", billingFrequency: "MONTHLY", discountIncentive: 0, status: "ACTIVE" };
